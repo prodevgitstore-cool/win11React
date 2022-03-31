@@ -132,8 +132,7 @@ function App() {
   })
 
   return (
-    <div className="App">
-    <Suspense fallback={<h1>Loading...</h1>}>  
+    <div className="App">  
       <ErrorBoundary FallbackComponent={ErrorFallback}>
       {!wall.booted?<BootScreen dir={wall.dir}/>:null}
       {wall.locked?<LockScreen dir={wall.dir}/>:null}
@@ -161,7 +160,6 @@ function App() {
         <ActMenu/>  
       </div>
      </ErrorBoundary>
-    </Suspense>
     </div>
   );
 }
